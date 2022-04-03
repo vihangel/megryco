@@ -15,6 +15,7 @@
 
 .container {
   max-width: 1439px;
+  width: 100%;
   margin: 0 auto;
   padding: 0px;
   position: relative;
@@ -122,7 +123,7 @@ header img {
 
 .header_menu nav li {
   margin-left: 24px;
-  display: inline-block;
+  display: inline;
 }
 .header_menu nav li a {
   font-family: Montserrat, sans-serif;
@@ -348,7 +349,6 @@ footer .btn {
   font-size: 16px;
   line-height: 24px;
 
-
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
@@ -397,32 +397,40 @@ footer .btn:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 32px;
+    padding: 32px 0;
     flex-wrap: wrap;
   }
   .header_menu .btn {
     position: absolute;
     top: 30px;
     right: 10px;
+    padding: 8px;
+    width: 150px;
+    text-align: center;
   }
   .header_menu {
-    height: auto;
-    margin-top: 30px;
-    display: flex;
-
-    align-items: center;
-    justify-content: space-between;
+    margin-top: 50px;
+  }
+  .header_menu nav li a {
+    font-size: 22px;
   }
 
   .intro img {
-    max-width: 552px;
-    min-width: 300px;
+    max-width: 100%;
 
+    width: 100%;
     margin-right: 0px;
     margin-bottom: 30px;
   }
+  .intro div {
+    width: 100%;
+  }
+  .intro h3 {
+    max-width: 100%;
+    width: 100%;
+  }
   .approach .container .part1 {
-    max-width: 552px;
+    width: 100%;
   }
   .approach .feature {
     text-align: center;
@@ -430,13 +438,40 @@ footer .btn:hover {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    gap: 50px;
+  }
+  .feature > :nth-child(even) {
+    height: 0;
+    width: 0;
+  }
+  .h4-montserrat {
+    font-size: 22px;
   }
 
+  .approach .h3-montserrat,
+  .approach .h4-montserrat,
+  .approach .h4-adobe {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .property .container .text {
+    max-width: 100%;
+    margin: 0 auto;
+  }
   .property img {
+    box-sizing: border-box;
     margin-top: 30px;
+    width: 100%;
+    max-height: 100%;
   }
   .slideshow-container {
     margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  footer .container div p {
+    width: 70%;
   }
 }
 
@@ -448,7 +483,6 @@ footer .btn:hover {
     max-width: 99%;
   }
 }
-
 
 /* --> Animação <-- */
 
@@ -465,8 +499,9 @@ footer .btn:hover {
   }
 }
 
-
-* {box-sizing:border-box}
+* {
+  box-sizing: border-box;
+}
 
 /* Slideshow container */
 .sslideshow-container {
@@ -481,7 +516,8 @@ footer .btn:hover {
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -503,10 +539,10 @@ footer .btn:hover {
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
-
 
 /* The dots/bullets/indicators */
 .dot {
@@ -520,7 +556,8 @@ footer .btn:hover {
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
   background-color: #717171;
 }
 
@@ -531,6 +568,10 @@ footer .btn:hover {
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
